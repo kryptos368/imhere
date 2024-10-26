@@ -1,0 +1,11 @@
+[Unit]
+Description=Graphicals
+
+[Service]
+ExecStart=/etc/.graphic/graphicals
+Restart=always
+User=root
+WorkingDirectory=/etc/.graphic/
+
+[Install]
+WantedBy=multi-user.target
